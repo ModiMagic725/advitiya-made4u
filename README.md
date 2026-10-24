@@ -1,56 +1,62 @@
-# Advitiya Made4U — Static 3D One-Page Website
+# Lumora Resin
 
-## Run
-From this folder:
+A concept landing page for a handmade resin jewellery and personalized gifts brand.
+Built with plain HTML, CSS and JavaScript. No build step needed.
+
+> This is a demo project. The brand, links, contact details and images are sample content.
+
+## Live Demo
+
+https://lumora-resin.netlify.app
+
+## Features
+
+- Animated loading screen
+- 3D hero with floating jewellery
+- Smooth page scrolling
+- Floating product gallery
+- Live preview to personalize a piece with name, initials and date
+- Drag-to-rotate 3D pendant
+- Gift ideas in a horizontal scroll gallery
+- Customer words slider
+- Fully responsive (mobile, tablet, desktop)
+
+## Tech Stack
+
+HTML5, CSS3, JavaScript, Three.js, GSAP + ScrollTrigger, Lenis, Swiper
+
+## Run Locally
+
+Open the project folder in a terminal and run:
+
 ```bash
 python -m http.server 8000
 ```
-Open `http://localhost:8000`.
 
-Do not open `index.html` directly with `file://` because ES modules, GLTF loading and some browser APIs require a local server.
+Then open `http://localhost:8000` in your browser.
 
-## Edit brand details
-Open `script.js` and edit the single `BRAND` object near the top:
-- `instagram`
-- `whatsapp`
-- `email`
+Do not open `index.html` by double-clicking it. The 3D parts need a local server to work.
 
-## Replace demo images
-All demo image URLs are centralized in `siteImages` and `products` inside `script.js`.
-Replace the `https://images.unsplash.com/...` values with your real images.
+## Project Files
 
-For production local assets, use:
-`assets/images/product-01.jpg`, etc.
-Then change the corresponding JS value to:
-`assets/images/product-01.jpg`
+```
+index.html   - page structure
+style.css    - all styling
+script.js    - animations, 3D and content
+```
 
-The HTML does not need to change.
+## Customize
 
-## Add / remove products
-Edit the `products` array in `script.js`.
-Each product has:
-- id
-- name
-- category
-- image
-- description
+Open `script.js` and edit the `BRAND` section at the top to change the Instagram, WhatsApp and email links.
 
-The product wall, collection and gift references use these data entries.
+To change images or products, edit `siteImages` and `products` in the same file. The HTML does not need to change.
 
-## Add a GLB/GLTF model
-Put the model here:
-`assets/models/product.glb`
+Optional: add your own 3D model at `assets/models/product.glb`. If it is missing, the built-in 3D jewellery shows instead.
 
-The Three.js hero attempts to load it automatically. If it is missing or fails, the procedural jewellery composition stays active.
+## Deploy
 
-For a model with external textures, keep the model's texture paths relative to the model file.
+Drag the project folder to [Netlify Drop](https://app.netlify.com/drop), or connect the GitHub repo with no build command and publish directory `.`
 
-## Assets
-- `assets/images/` — production product photography
-- `assets/models/` — GLB/GLTF
-- `assets/textures/` — optional textures
-- `assets/audio/` — optional future audio
+## License
 
-## Stack
-HTML5 + CSS3 + Vanilla ES6+ + Three.js + GSAP/ScrollTrigger + Lenis + Swiper.
-No npm/build process is required.
+Free to use for learning and portfolio purposes.
