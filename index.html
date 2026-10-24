@@ -1,355 +1,612 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#F8F3EA">
-  <meta name="description" content="Advitiya Made4U — handcrafted resin jewellery, real flower keepsakes and personalized gifts.">
-  <title>Advitiya Made4U — Crafted, Not Manufactured.</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F8F3EA" />
+    <meta
+      name="description"
+      content="Advitiya Made4U — handcrafted resin jewellery, real flower keepsakes and personalized gifts."
+    />
+    <title>Advitiya Made4U — Crafted, Not Manufactured.</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NEW: top scroll progress hairline -->
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-  <!-- NEW: top scroll progress hairline -->
-  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="noise" aria-hidden="true"></div>
 
-  <div class="noise" aria-hidden="true"></div>
-
-  <div class="preloader" id="preloader" aria-label="Loading">
-    <div class="loader-brand">
-      <span>ADVITIYA</span>
-      <span>MADE4U</span>
+    <div class="preloader" id="preloader" aria-label="Loading">
+      <div class="loader-brand">
+        <span>ADVITIYA</span>
+        <span>MADE4U</span>
+      </div>
+      <div class="loader-line"><span id="loader-progress"></span></div>
+      <span class="loader-percent" id="loader-percent">0%</span>
     </div>
-    <div class="loader-line"><span id="loader-progress"></span></div>
-    <span class="loader-percent" id="loader-percent">0%</span>
-  </div>
 
-  <header class="site-header" id="site-header">
-    <a class="brand-mark" href="#home" aria-label="Advitiya Made4U home">
-      <span>ADVITIYA</span><small>MADE4U</small>
-    </a>
-
-    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#home">Home</a>
-      <a href="#collection">Collection</a>
-      <a href="#story">Story</a>
-      <a href="#custom">Custom</a>
-      <a href="#gifts">Gifts</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="header-actions">
-      <a class="instagram-link" data-instagram href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <span class="ig-dot"></span> Instagram
+    <header class="site-header" id="site-header">
+      <a class="brand-mark" href="#home" aria-label="Advitiya Made4U home">
+        <span>ADVITIYA</span><small>MADE4U</small>
       </a>
-      <a class="pill-button pill-small magnetic" data-whatsapp href="#" target="_blank" rel="noopener noreferrer">
-        <span>DM TO ORDER</span>
-      </a>
-    </div>
-  </header>
 
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <nav aria-label="Mobile navigation">
-      <a href="#home">Home</a>
-      <a href="#collection">Collection</a>
-      <a href="#story">Story</a>
-      <a href="#custom">Custom</a>
-      <a href="#gifts">Gifts</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="mobile-menu-ig" data-instagram href="#" target="_blank" rel="noopener noreferrer">@advitiya_made4u ↗</a>
-  </div>
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        <span></span><span></span>
+      </button>
 
-  <main>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#story">Story</a>
+        <a href="#custom">Custom</a>
+        <a href="#gifts">Gifts</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <!-- ============ HERO ============ -->
-    <section class="hero section-dark" id="home">
-      <canvas id="hero-canvas" aria-hidden="true"></canvas>
-      <div class="hero-glow hero-glow-a"></div>
-      <div class="hero-glow hero-glow-b"></div>
-
-      <div class="hero-content">
-        <p class="eyebrow reveal-up">HANDMADE RESIN JEWELLERY · PERSONALIZED GIFTS</p>
-        <h1 class="hero-title">
-          <span class="serif reveal-line">ADVITIYA</span>
-          <span class="outline reveal-line">MADE4U</span>
-        </h1>
-        <div class="hero-copy reveal-up">
-          <p class="kicker">CRAFTED, NOT MANUFACTURED.</p>
-          <p>Memories,<br><em>Made to Last.</em></p>
-          <span>Handcrafted resin jewellery and personalized gifts,<br>made with love.</span>
-        </div>
-        <div class="hero-cta reveal-up">
-          <a href="#collection" class="button button-light magnetic cursor-label" data-cursor="EXPLORE">
-            <span>Explore Collection</span><i>↗</i>
-          </a>
-          <a data-instagram href="#" target="_blank" rel="noopener noreferrer" class="text-link cursor-label" data-cursor="OPEN">
-            DM to Order <span>↗</span>
-          </a>
-        </div>
+      <div class="header-actions">
+        <a
+          class="instagram-link"
+          data-instagram
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <span class="ig-dot"></span> Instagram
+        </a>
+        <a
+          class="pill-button pill-small magnetic"
+          data-whatsapp
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>DM TO ORDER</span>
+        </a>
       </div>
+    </header>
 
-      <div class="hero-caption">
-        <span>01 / 10</span>
-        <span>HANDMADE IN INDIA</span>
-      </div>
-      <div class="scroll-note"><span>SCROLL TO DISCOVER</span><i></i></div>
-    </section>
-
-    <!-- ============ STORY ============ -->
-    <section class="intro section-cream" id="story">
-      <div class="container intro-grid">
-        <div>
-          <p class="eyebrow dark reveal-up">01 — THE CRAFT</p>
-          <h2 class="display-title reveal-up">Every piece<br><em>holds a story.</em></h2>
-        </div>
-        <div class="intro-text reveal-up">
-          <p class="lead">At Advitiya Made4U, memories become keepsakes.</p>
-          <p>Flowers, names, dates, emotions and special moments are carefully transformed into handmade resin pieces designed to stay with you for years.</p>
-          <div class="signature">made slowly <span>✦</span> made personally</div>
-        </div>
-      </div>
-      <div class="story-image-wrap">
-        <img class="story-image" data-site-image="story" alt="Warm handmade floral jewellery and craft materials">
-        <div class="image-label"><span>THE HAND</span><span>BEHIND THE MEMORY</span></div>
-      </div>
-    </section>
-
-    <!-- NEW: velocity-reactive marquee band -->
-    <div class="marquee-band" aria-hidden="true">
-      <div class="marquee-track" id="marquee-track">
-        <div class="marquee-group">
-          <span>Handmade Resin Jewellery</span><i>✦</i>
-          <span>Real Flower Keepsakes</span><i>✦</i>
-          <span>Personalized Gifts</span><i>✦</i>
-          <span>Crafted, Not Manufactured</span><i>✦</i>
-        </div>
-        <div class="marquee-group">
-          <span>Handmade Resin Jewellery</span><i>✦</i>
-          <span>Real Flower Keepsakes</span><i>✦</i>
-          <span>Personalized Gifts</span><i>✦</i>
-          <span>Crafted, Not Manufactured</span><i>✦</i>
-        </div>
-      </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav aria-label="Mobile navigation">
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#story">Story</a>
+        <a href="#custom">Custom</a>
+        <a href="#gifts">Gifts</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a
+        class="mobile-menu-ig"
+        data-instagram
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        >@advitiya_made4u ↗</a
+      >
     </div>
 
-    <!-- ============ FLOATING PRODUCT WALL ============ -->
-    <section class="product-wall section-ivory" id="wall">
-      <div class="wall-intro">
-        <p class="eyebrow dark">02 — THE COLLECTION</p>
-        <h2 class="display-title">Made by <em>hand.</em><br>Made for <em>memories.</em></h2>
-        <p>Scroll through a floating gallery of little things made to mean a lot.</p>
-      </div>
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero section-dark" id="home">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-glow hero-glow-a"></div>
+        <div class="hero-glow hero-glow-b"></div>
 
-      <div class="wall-stage" id="product-wall-stage">
-        <div class="wall-copy wall-copy-one"><span>01</span><strong>Made<br>by Hand</strong></div>
-        <div class="wall-copy wall-copy-two"><span>02</span><strong>Made for<br>Memories</strong></div>
-        <div class="wall-copy wall-copy-three"><span>03</span><strong>Made<br>for You</strong></div>
-        <div class="wall-vignette"></div>
-        <div class="wall-products" id="wall-products" aria-label="Floating product gallery"></div>
-      </div>
-    </section>
-
-    <!-- ============ REAL FLOWERS ============ -->
-    <section class="flower-section section-cream">
-      <div class="flower-backdrop">
-        <div class="flower-orb flower-orb-one"></div>
-        <div class="flower-orb flower-orb-two"></div>
-        <div class="petal petal-a">✿</div><div class="petal petal-b">✦</div><div class="petal petal-c">✿</div>
-      </div>
-      <div class="container flower-grid">
-        <div class="flower-copy">
-          <p class="eyebrow dark reveal-up">03 — REAL FLOWERS</p>
-          <h2 class="display-title reveal-up">Keep a moment<br><em>forever.</em></h2>
-          <p class="lead reveal-up">A petal from a celebration. A flower from a bouquet. A tiny memory that deserves more time.</p>
-          <p class="reveal-up">Preserved flowers are carefully arranged and sealed into resin to create wearable keepsakes that hold their colour, shape and meaning.</p>
-          <a href="#custom" class="underlined-link reveal-up">Preserve your memory <span>↗</span></a>
+        <div class="hero-content">
+          <p class="eyebrow reveal-up">
+            HANDMADE RESIN JEWELLERY · PERSONALIZED GIFTS
+          </p>
+          <h1 class="hero-title">
+            <span class="serif reveal-line">ADVITIYA</span>
+            <span class="outline reveal-line">MADE4U</span>
+          </h1>
+          <div class="hero-copy reveal-up">
+            <p class="kicker">CRAFTED, NOT MANUFACTURED.</p>
+            <p>Memories,<br /><em>Made to Last.</em></p>
+            <span
+              >Handcrafted resin jewellery and personalized gifts,<br />made
+              with love.</span
+            >
+          </div>
+          <div class="hero-cta reveal-up">
+            <a
+              href="#collection"
+              class="button button-light magnetic cursor-label"
+              data-cursor="EXPLORE"
+            >
+              <span>Explore Collection</span><i>↗</i>
+            </a>
+            <a
+              data-instagram
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link cursor-label"
+              data-cursor="OPEN"
+            >
+              DM to Order <span>↗</span>
+            </a>
+          </div>
         </div>
-        <div class="flower-visual reveal-up">
-          <img data-site-image="flowers" alt="Preserved flowers in a warm resin jewellery composition">
-          <div class="vertical-note">PRESERVED · PRESSED · PERSONAL</div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ============ EDITORIAL COLLECTION ============ -->
-    <section class="collection section-pearl" id="collection">
-      <div class="container">
-        <div class="section-heading">
+        <div class="hero-caption">
+          <span>01 / 10</span>
+          <span>HANDMADE IN INDIA</span>
+        </div>
+        <div class="scroll-note"><span>SCROLL TO DISCOVER</span><i></i></div>
+      </section>
+
+      <!-- ============ STORY ============ -->
+      <section class="intro section-cream" id="story">
+        <div class="container intro-grid">
           <div>
-            <p class="eyebrow dark">04 — EDITORIAL COLLECTION</p>
-            <h2 class="display-title">Objects with<br><em>emotion.</em></h2>
+            <p class="eyebrow dark reveal-up">01 — THE CRAFT</p>
+            <h2 class="display-title reveal-up">
+              Every piece<br /><em>holds a story.</em>
+            </h2>
           </div>
-          <p>Not just jewellery. Small, personal objects designed around your story.</p>
+          <div class="intro-text reveal-up">
+            <p class="lead">At Advitiya Made4U, memories become keepsakes.</p>
+            <p>
+              Flowers, names, dates, emotions and special moments are carefully
+              transformed into handmade resin pieces designed to stay with you
+              for years.
+            </p>
+            <div class="signature">
+              made slowly <span>✦</span> made personally
+            </div>
+          </div>
         </div>
-        <div class="collection-grid" id="collection-grid"></div>
-      </div>
-    </section>
-
-    <!-- ============ INTERACTIVE 3D JEWEL ============ -->
-    <section class="interactive section-blush" id="interactive">
-      <div class="interactive-copy">
-        <p class="eyebrow dark">05 — TOUCH THE PIECE</p>
-        <h2 class="display-title">Almost<br><em>tangible.</em></h2>
-        <p>Move your cursor. Let the light move across the piece. Drag or click to turn it.</p>
-        <span class="interaction-hint">DRAG / MOVE / CLICK</span>
-      </div>
-      <div class="interactive-stage">
-        <canvas id="jewel-canvas" aria-label="Interactive 3D jewellery preview"></canvas>
-        <div class="jewel-fallback"><img data-site-image="personalization" alt="Resin pendant close-up"></div>
-        <button id="jewel-spin" class="round-control magnetic" type="button" aria-label="Rotate jewellery">↻</button>
-      </div>
-    </section>
-
-    <!-- ============ PERSONALIZATION ============ -->
-    <section class="custom section-burgundy" id="custom">
-      <div class="custom-glow"></div>
-      <div class="container custom-grid">
-        <div class="custom-copy">
-          <p class="eyebrow">06 — PERSONALIZATION</p>
-          <h2 class="display-title light">Make<br><em>it yours.</em></h2>
-          <p class="lead">A name. A date. A flower. A message. Your story belongs on the piece.</p>
-          <div class="custom-fields">
-            <label>Name <input id="custom-name" type="text" value="Tejas" maxlength="18" autocomplete="off"></label>
-            <label>Initials <input id="custom-initials" type="text" value="T" maxlength="2" autocomplete="off"></label>
-            <label>Special date <input id="custom-date" type="text" placeholder="12.02.2026" maxlength="16"></label>
+        <div class="story-image-wrap">
+          <img
+            class="story-image"
+            data-site-image="story"
+            alt="Warm handmade floral jewellery and craft materials"
+          />
+          <div class="image-label">
+            <span>THE HAND</span><span>BEHIND THE MEMORY</span>
           </div>
-          <a href="#contact" class="button button-outline-light magnetic cursor-label" data-cursor="CREATE">
-            <span>Create Your Custom Piece</span><i>↗</i>
-          </a>
         </div>
+      </section>
 
-        <div class="custom-preview">
-          <div class="preview-halo"></div>
-          <div class="preview-jewel">
-            <div class="preview-flower">✿</div>
-            <div class="preview-initial" id="preview-initial">T</div>
-            <div class="preview-name" id="preview-name">Made for Tejas</div>
-            <div class="preview-date" id="preview-date">WITH LOVE</div>
+      <!-- NEW: velocity-reactive marquee band -->
+      <div class="marquee-band" aria-hidden="true">
+        <div class="marquee-track" id="marquee-track">
+          <div class="marquee-group">
+            <span>Handmade Resin Jewellery</span><i>✦</i>
+            <span>Real Flower Keepsakes</span><i>✦</i>
+            <span>Personalized Gifts</span><i>✦</i>
+            <span>Crafted, Not Manufactured</span><i>✦</i>
           </div>
-          <span class="preview-label">LIVE PREVIEW</span>
+          <div class="marquee-group">
+            <span>Handmade Resin Jewellery</span><i>✦</i>
+            <span>Real Flower Keepsakes</span><i>✦</i>
+            <span>Personalized Gifts</span><i>✦</i>
+            <span>Crafted, Not Manufactured</span><i>✦</i>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- ============ GIFT MOMENTS ============ -->
-    <section class="gifts section-ivory" id="gifts">
+      <!-- ============ FLOATING PRODUCT WALL ============ -->
+      <section class="product-wall section-ivory" id="wall">
+        <div class="wall-intro">
+          <p class="eyebrow dark">02 — THE COLLECTION</p>
+          <h2 class="display-title">
+            Made by <em>hand.</em><br />Made for <em>memories.</em>
+          </h2>
+          <p>
+            Scroll through a floating gallery of little things made to mean a
+            lot.
+          </p>
+        </div>
+
+        <div class="wall-stage" id="product-wall-stage">
+          <div class="wall-copy wall-copy-one">
+            <span>01</span><strong>Made<br />by Hand</strong>
+          </div>
+          <div class="wall-copy wall-copy-two">
+            <span>02</span><strong>Made for<br />Memories</strong>
+          </div>
+          <div class="wall-copy wall-copy-three">
+            <span>03</span><strong>Made<br />for You</strong>
+          </div>
+          <div class="wall-vignette"></div>
+          <div
+            class="wall-products"
+            id="wall-products"
+            aria-label="Floating product gallery"
+          ></div>
+        </div>
+      </section>
+
+      <!-- ============ REAL FLOWERS ============ -->
+      <section class="flower-section section-cream">
+        <div class="flower-backdrop">
+          <div class="flower-orb flower-orb-one"></div>
+          <div class="flower-orb flower-orb-two"></div>
+          <div class="petal petal-a">✿</div>
+          <div class="petal petal-b">✦</div>
+          <div class="petal petal-c">✿</div>
+        </div>
+        <div class="container flower-grid">
+          <div class="flower-copy">
+            <p class="eyebrow dark reveal-up">03 — REAL FLOWERS</p>
+            <h2 class="display-title reveal-up">
+              Keep a moment<br /><em>forever.</em>
+            </h2>
+            <p class="lead reveal-up">
+              A petal from a celebration. A flower from a bouquet. A tiny memory
+              that deserves more time.
+            </p>
+            <p class="reveal-up">
+              Preserved flowers are carefully arranged and sealed into resin to
+              create wearable keepsakes that hold their colour, shape and
+              meaning.
+            </p>
+            <a href="#custom" class="underlined-link reveal-up"
+              >Preserve your memory <span>↗</span></a
+            >
+          </div>
+          <div class="flower-visual reveal-up">
+            <img
+              data-site-image="flowers"
+              alt="Preserved flowers in a warm resin jewellery composition"
+            />
+            <div class="vertical-note">PRESERVED · PRESSED · PERSONAL</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EDITORIAL COLLECTION ============ -->
+      <section class="collection section-pearl" id="collection">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow dark">04 — EDITORIAL COLLECTION</p>
+              <h2 class="display-title">Objects with<br /><em>emotion.</em></h2>
+            </div>
+            <p>
+              Not just jewellery. Small, personal objects designed around your
+              story.
+            </p>
+          </div>
+          <div class="collection-grid" id="collection-grid"></div>
+        </div>
+      </section>
+
+      <!-- ============ INTERACTIVE 3D JEWEL ============ -->
+      <section class="interactive section-blush" id="interactive">
+        <div class="interactive-copy">
+          <p class="eyebrow dark">05 — TOUCH THE PIECE</p>
+          <h2 class="display-title">Almost<br /><em>tangible.</em></h2>
+          <p>
+            Move your cursor. Let the light move across the piece. Drag or click
+            to turn it.
+          </p>
+          <span class="interaction-hint">DRAG / MOVE / CLICK</span>
+        </div>
+        <div class="interactive-stage">
+          <canvas
+            id="jewel-canvas"
+            aria-label="Interactive 3D jewellery preview"
+          ></canvas>
+          <div class="jewel-fallback">
+            <img
+              data-site-image="personalization"
+              alt="Resin pendant close-up"
+            />
+          </div>
+          <button
+            id="jewel-spin"
+            class="round-control magnetic"
+            type="button"
+            aria-label="Rotate jewellery"
+          >
+            ↻
+          </button>
+        </div>
+      </section>
+
+      <!-- ============ PERSONALIZATION ============ -->
+      <section class="custom section-burgundy" id="custom">
+        <div class="custom-glow"></div>
+        <div class="container custom-grid">
+          <div class="custom-copy">
+            <p class="eyebrow">06 — PERSONALIZATION</p>
+            <h2 class="display-title light">Make<br /><em>it yours.</em></h2>
+            <p class="lead">
+              A name. A date. A flower. A message. Your story belongs on the
+              piece.
+            </p>
+            <div class="custom-fields">
+              <label
+                >Name
+                <input
+                  id="custom-name"
+                  type="text"
+                  value="Tejas"
+                  maxlength="18"
+                  autocomplete="off"
+              /></label>
+              <label
+                >Initials
+                <input
+                  id="custom-initials"
+                  type="text"
+                  value="T"
+                  maxlength="2"
+                  autocomplete="off"
+              /></label>
+              <label
+                >Special date
+                <input
+                  id="custom-date"
+                  type="text"
+                  placeholder="12.02.2026"
+                  maxlength="16"
+              /></label>
+            </div>
+            <a
+              href="#contact"
+              class="button button-outline-light magnetic cursor-label"
+              data-cursor="CREATE"
+            >
+              <span>Create Your Custom Piece</span><i>↗</i>
+            </a>
+          </div>
+
+          <div class="custom-preview">
+            <div class="preview-halo"></div>
+            <div class="preview-jewel">
+              <div class="preview-flower">✿</div>
+              <div class="preview-initial" id="preview-initial">T</div>
+              <div class="preview-name" id="preview-name">Made for Tejas</div>
+              <div class="preview-date" id="preview-date">WITH LOVE</div>
+            </div>
+            <span class="preview-label">LIVE PREVIEW</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ GIFT MOMENTS ============ -->
+      <section class="gifts section-ivory" id="gifts">
+        <div class="container">
+          <div class="gifts-head">
+            <p class="eyebrow dark">07 — GIFT MOMENTS</p>
+            <h2 class="display-title">
+              Some moments deserve<br /><em>more than a gift.</em>
+            </h2>
+          </div>
+          <div class="gifts-track" id="gifts-track">
+            <article class="gift-card">
+              <span>01</span
+              ><img data-product-image="6" alt="Personalized rakhi gift" />
+              <h3>Raksha Bandhan</h3>
+              <p>Something personal for the bond that never changes.</p>
+            </article>
+            <article class="gift-card">
+              <span>02</span
+              ><img data-product-image="8" alt="Personalized gift box" />
+              <h3>Birthdays</h3>
+              <p>Turn a name, memory or inside joke into a keepsake.</p>
+            </article>
+            <article class="gift-card">
+              <span>03</span
+              ><img data-product-image="7" alt="Memory frame gift" />
+              <h3>Anniversaries</h3>
+              <p>Hold a date, a flower and a feeling in one piece.</p>
+            </article>
+            <article class="gift-card">
+              <span>04</span
+              ><img data-product-image="4" alt="Initial pendant" />
+              <h3>Weddings</h3>
+              <p>
+                Preserve a little piece of the day you never want to forget.
+              </p>
+            </article>
+            <article class="gift-card">
+              <span>05</span
+              ><img
+                data-site-image="gifts"
+                alt="Elegant personalized gift arrangement"
+              />
+              <h3>Festivals</h3>
+              <p>Thoughtful handmade gifts with a warm, personal touch.</p>
+            </article>
+            <article class="gift-card">
+              <span>06</span
+              ><img data-product-image="1" alt="Floral memory pendant" />
+              <h3>Special Moments</h3>
+              <p>Because some moments don't need a calendar to matter.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ INSTAGRAM / STUDIO ============ -->
+      <section class="instagram-section section-cream">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow dark">08 — THE STUDIO</p>
+              <h2 class="display-title">Follow<br /><em>the craft.</em></h2>
+            </div>
+            <p>
+              A little glimpse into the hands, flowers and memories behind every
+              piece.
+            </p>
+          </div>
+          <div class="ig-grid" id="ig-grid"></div>
+          <a
+            data-instagram
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="ig-cta magnetic"
+            >FOLLOW @advitiya_made4u <span>↗</span></a
+          >
+        </div>
+      </section>
+
+      <!-- ============ TESTIMONIALS ============ -->
+      <section class="testimonials section-pearl">
+        <div class="container">
+          <p class="eyebrow dark">09 — WORDS FROM THE HEART</p>
+          <div class="testimonial-slider swiper">
+            <div class="swiper-wrapper">
+              <article class="swiper-slide quote-card">
+                <span>“</span>
+                <blockquote>
+                  The flower pendant turned my wedding flowers into something I
+                  can keep forever.
+                </blockquote>
+                <p>— A happy bride</p>
+              </article>
+              <article class="swiper-slide quote-card">
+                <span>“</span>
+                <blockquote>
+                  It felt so personal. The tiny details made the gift feel like
+                  it was made only for us.
+                </blockquote>
+                <p>— A thoughtful sister</p>
+              </article>
+              <article class="swiper-slide quote-card">
+                <span>“</span>
+                <blockquote>
+                  Beautifully handmade, warm and delicate. It became my
+                  favourite everyday piece.
+                </blockquote>
+                <p>— A resin jewellery lover</p>
+              </article>
+              <article class="swiper-slide quote-card">
+                <span>“</span>
+                <blockquote>
+                  The memory frame is such a special way to hold onto a moment
+                  without putting it away in a drawer.
+                </blockquote>
+                <p>— A family keepsake collector</p>
+              </article>
+            </div>
+            <div class="swiper-controls">
+              <button
+                class="swiper-prev"
+                type="button"
+                aria-label="Previous testimonial"
+              >
+                ←
+              </button>
+              <div class="swiper-pagination"></div>
+              <button
+                class="swiper-next"
+                type="button"
+                aria-label="Next testimonial"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FINAL CTA ============ -->
+      <section class="final-cta section-dark" id="contact">
+        <div class="final-image">
+          <img data-site-image="hero" alt="Elegant handmade jewellery detail" />
+        </div>
+        <div class="final-overlay"></div>
+        <div class="container final-content">
+          <p class="eyebrow">10 — LET'S MAKE A MEMORY</p>
+          <h2 class="display-title light">
+            Have a memory<br /><em>worth keeping?</em>
+          </h2>
+          <p>Let's turn it into something you can hold forever.</p>
+          <div class="final-buttons">
+            <a
+              data-instagram
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-light magnetic cursor-label"
+              data-cursor="DM"
+            >
+              <span>DM on Instagram</span><i>↗</i>
+            </a>
+            <a
+              data-whatsapp
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-glass magnetic cursor-label"
+              data-cursor="CHAT"
+            >
+              <span>WhatsApp Us</span><i>↗</i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer section-burgundy">
       <div class="container">
-        <div class="gifts-head">
-          <p class="eyebrow dark">07 — GIFT MOMENTS</p>
-          <h2 class="display-title">Some moments deserve<br><em>more than a gift.</em></h2>
-        </div>
-        <div class="gifts-track" id="gifts-track">
-          <article class="gift-card"><span>01</span><img data-product-image="6" alt="Personalized rakhi gift"><h3>Raksha Bandhan</h3><p>Something personal for the bond that never changes.</p></article>
-          <article class="gift-card"><span>02</span><img data-product-image="8" alt="Personalized gift box"><h3>Birthdays</h3><p>Turn a name, memory or inside joke into a keepsake.</p></article>
-          <article class="gift-card"><span>03</span><img data-product-image="7" alt="Memory frame gift"><h3>Anniversaries</h3><p>Hold a date, a flower and a feeling in one piece.</p></article>
-          <article class="gift-card"><span>04</span><img data-product-image="4" alt="Initial pendant"><h3>Weddings</h3><p>Preserve a little piece of the day you never want to forget.</p></article>
-          <article class="gift-card"><span>05</span><img data-site-image="gifts" alt="Elegant personalized gift arrangement"><h3>Festivals</h3><p>Thoughtful handmade gifts with a warm, personal touch.</p></article>
-          <article class="gift-card"><span>06</span><img data-product-image="1" alt="Floral memory pendant"><h3>Special Moments</h3><p>Because some moments don't need a calendar to matter.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ INSTAGRAM / STUDIO ============ -->
-    <section class="instagram-section section-cream">
-      <div class="container">
-        <div class="section-heading">
+        <div class="footer-top">
           <div>
-            <p class="eyebrow dark">08 — THE STUDIO</p>
-            <h2 class="display-title">Follow<br><em>the craft.</em></h2>
+            <a class="footer-brand" href="#home">ADVITIYA MADE4U</a>
+            <p>Crafted, Not Manufactured.</p>
           </div>
-          <p>A little glimpse into the hands, flowers and memories behind every piece.</p>
-        </div>
-        <div class="ig-grid" id="ig-grid"></div>
-        <a data-instagram href="#" target="_blank" rel="noopener noreferrer" class="ig-cta magnetic">FOLLOW @advitiya_made4u <span>↗</span></a>
-      </div>
-    </section>
-
-    <!-- ============ TESTIMONIALS ============ -->
-    <section class="testimonials section-pearl">
-      <div class="container">
-        <p class="eyebrow dark">09 — WORDS FROM THE HEART</p>
-        <div class="testimonial-slider swiper">
-          <div class="swiper-wrapper">
-            <article class="swiper-slide quote-card">
-              <span>“</span><blockquote>The flower pendant turned my wedding flowers into something I can keep forever.</blockquote><p>— A happy bride</p>
-            </article>
-            <article class="swiper-slide quote-card">
-              <span>“</span><blockquote>It felt so personal. The tiny details made the gift feel like it was made only for us.</blockquote><p>— A thoughtful sister</p>
-            </article>
-            <article class="swiper-slide quote-card">
-              <span>“</span><blockquote>Beautifully handmade, warm and delicate. It became my favourite everyday piece.</blockquote><p>— A resin jewellery lover</p>
-            </article>
-            <article class="swiper-slide quote-card">
-              <span>“</span><blockquote>The memory frame is such a special way to hold onto a moment without putting it away in a drawer.</blockquote><p>— A family keepsake collector</p>
-            </article>
-          </div>
-          <div class="swiper-controls">
-            <button class="swiper-prev" type="button" aria-label="Previous testimonial">←</button>
-            <div class="swiper-pagination"></div>
-            <button class="swiper-next" type="button" aria-label="Next testimonial">→</button>
+          <div class="footer-desc">
+            Handmade Resin Jewellery<br />Personalized Gifts
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ FINAL CTA ============ -->
-    <section class="final-cta section-dark" id="contact">
-      <div class="final-image"><img data-site-image="hero" alt="Elegant handmade jewellery detail"></div>
-      <div class="final-overlay"></div>
-      <div class="container final-content">
-        <p class="eyebrow">10 — LET'S MAKE A MEMORY</p>
-        <h2 class="display-title light">Have a memory<br><em>worth keeping?</em></h2>
-        <p>Let's turn it into something you can hold forever.</p>
-        <div class="final-buttons">
-          <a data-instagram href="#" target="_blank" rel="noopener noreferrer" class="button button-light magnetic cursor-label" data-cursor="DM">
-            <span>DM on Instagram</span><i>↗</i>
-          </a>
-          <a data-whatsapp href="#" target="_blank" rel="noopener noreferrer" class="button button-glass magnetic cursor-label" data-cursor="CHAT">
-            <span>WhatsApp Us</span><i>↗</i>
-          </a>
+        <div class="footer-links">
+          <div>
+            <a data-instagram href="#" target="_blank" rel="noopener noreferrer"
+              >Instagram</a
+            ><a data-whatsapp href="#" target="_blank" rel="noopener noreferrer"
+              >WhatsApp</a
+            ><a data-email href="#">Email</a>
+          </div>
+          <div>
+            <a href="#home">Home</a><a href="#collection">Collection</a
+            ><a href="#story">Story</a><a href="#custom">Custom</a
+            ><a href="#gifts">Gifts</a><a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Advitiya Made4U. Crafted with love.</span
+          ><span>HANDMADE · PERSONAL · TIMELESS</span>
         </div>
       </div>
-    </section>
+    </footer>
 
-  </main>
+    <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+    <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer section-burgundy">
-    <div class="container">
-      <div class="footer-top">
-        <div>
-          <a class="footer-brand" href="#home">ADVITIYA MADE4U</a>
-          <p>Crafted, Not Manufactured.</p>
-        </div>
-        <div class="footer-desc">Handmade Resin Jewellery<br>Personalized Gifts</div>
-      </div>
-      <div class="footer-links">
-        <div><a data-instagram href="#" target="_blank" rel="noopener noreferrer">Instagram</a><a data-whatsapp href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a><a data-email href="#">Email</a></div>
-        <div><a href="#home">Home</a><a href="#collection">Collection</a><a href="#story">Story</a><a href="#custom">Custom</a><a href="#gifts">Gifts</a><a href="#contact">Contact</a></div>
-      </div>
-      <div class="footer-bottom"><span>© 2026 Advitiya Made4U. Crafted with love.</span><span>HANDMADE · PERSONAL · TIMELESS</span></div>
-    </div>
-  </footer>
-
-  <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
-  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
-
-  <!-- UPDATED: Lenis (smooth scroll) + Swiper JS ab load ho rahe hain -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script type="module" src="script.js"></script>
-</body>
+    <!-- UPDATED: Lenis (smooth scroll) + Swiper JS ab load ho rahe hain -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
+
